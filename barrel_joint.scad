@@ -1,4 +1,4 @@
-use <9g_servo.scad>
+use <components/9g_servo.scad>
 use <MCAD/regular_shapes.scad>
 use <MCAD/boxes.scad>
 $fs = 0.5;

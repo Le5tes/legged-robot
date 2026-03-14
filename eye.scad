@@ -1,7 +1,7 @@
-use <9g_servo.scad>
+use <components/9g_servo.scad>
 use <../robot-chassis/pi-mount.scad>
 use <MCAD/boxes.scad>
-use <circular-bearing.scad>
+use <components/circular-bearing.scad>
 $fs = 0.5;
 $fa=1;
 module in_eye_joint_inner() {
@@ -192,7 +192,7 @@ module eye(pitch = 0, yaw = 0) {
         9g_motor();
         in_eye_joint();
         
-        //rotate([0,-pitch,0])
+        rotate([0,-pitch,0])
         eyeball(camera_mount_x,camera_mount_z);
     }
 }
