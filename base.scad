@@ -1,8 +1,8 @@
 $fs=0.5;
 //$fa=1;
 
-use <9g_servo.scad>
-use <circular-bearing.scad>
+use <components/9g_servo.scad>
+use <components/circular-bearing.scad>
 use <barrel_joint.scad>
 use <servo_connection_rod.scad>
 use <femur.scad>
