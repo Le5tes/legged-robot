@@ -1,4 +1,4 @@
-use <../modules/pi-mount.scad>
+use <../../../modules/pi-mount.scad>
 
 $fs = 0.5;
 $fa=1;

@@ -23,7 +23,6 @@ module base() {
     //translate([0,0,51])
     //rotate([0,0,0])
     //color("green")
-    // TODO - include this file in this repo - also move where it's rendered to main
     //import("../non-printable-components/raspberry_pi_3_b_plus.stl");
 }
 

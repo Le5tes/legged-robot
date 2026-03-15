@@ -2,6 +2,7 @@ $fs=0.5;
 
 use <MCAD/regular_shapes.scad>
 use <MCAD/boxes.scad>
+use <../../../modules/m2-bolt-hole.scad>
 
 include <../joint_points.scad>
 
@@ -37,7 +38,6 @@ module battery_box() {
         rotate([0,0,-90])
         translate([-138,-135, 5]) // To put it at 0,0
         hull(){
-            // TODO include this file in this repo
             import("../non-printable-components/XT60male.stl"); 
         }
     }

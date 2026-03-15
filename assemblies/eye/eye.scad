@@ -1,4 +1,4 @@
-use <../non-printable-components/9g_servo.scad>
+use <../../non-printable-components/9g_servo.scad>
 use <../../non-printable-components/circular-bearing.scad>
 use <components/in_eye_joint_inner.scad>
 use <components/in_eye_joint_outer.scad>
@@ -19,10 +19,6 @@ module in_eye_joint() {
     translate([0,0,16])
     circular_bearing(19,10,5);
 }
-
-
-
-
 
 module eye(pitch = 0, yaw = 0) {
     rotate([0,0,90])

@@ -2,6 +2,7 @@ $fs=0.5;
 
 use <MCAD/regular_shapes.scad>
 use <MCAD/boxes.scad>
+use <../../../modules/pi-mount.scad>
 
 module base_3() {
     pi_mount(rotation_vector=[0,0,90]) {

@@ -14,7 +14,7 @@ module in_eye_joint_outer_l() {
                 
                 rotate([-90,0,0])
                 translate([0,0,15.99])
-                cylinder(r=9.5, h=5.1) 
+                cylinder(r=9.5, h=5.1);
             }
         }
         sphere(25);
