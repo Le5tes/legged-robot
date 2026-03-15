@@ -1,5 +1,5 @@
 $fs = 0.5;
-use <foot-common-parts.scad>
+use <../modules/foot-common-parts.scad>
 
 smooth = false;
 

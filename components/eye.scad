@@ -1,7 +1,7 @@
-use <components/9g_servo.scad>
-use <../robot-chassis/pi-mount.scad>
+use <../non-printable-components/9g_servo.scad>
+use <../modules/pi-mount.scad>
 use <MCAD/boxes.scad>
-use <components/circular-bearing.scad>
+use <../non-printable-components/circular-bearing.scad>
 $fs = 0.5;
 $fa=1;
 module in_eye_joint_inner() {

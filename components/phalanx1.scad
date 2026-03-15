@@ -1,6 +1,6 @@
 $fs = 0.5;
-use <phalanx2.scad>
-use <foot-common-parts.scad>
+//use <phalanx2.scad>
+use <../modules/foot-common-parts.scad>
 
 module phalanx1() {
     difference() {

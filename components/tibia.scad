@@ -1,4 +1,4 @@
-use <barrel_joint.scad>
+use <../modules/barrel_joint.scad>
 
 $fs=0.5;
 
