@@ -9,17 +9,13 @@ use <modules/m2-bolt-hole.scad>
 use <modules/pi-mount.scad>
 use <modules/barrel_joint.scad>
 use <modules/servo_connection_rod.scad>
-use <components/femur.scad>
-use <components/tibia.scad>
-use <components/cover.scad>
-use <components/eye.scad>
-use <components/base.scad>
+use <assemblies/femur.scad>
+use <assemblies/tibia.scad>
+use <assemblies/cover/cover.scad>
+use <assemblies/eye/eye.scad>
+use <assemblies/base/base.scad>
 
-joint_point_LF= [30,30,-2];
-joint_point_RF= [30,-30,-2];
-
-joint_point_LH= [-30,30,-2];
-joint_point_RH= [-30,-30,-2];
+include <assemblies/base/components/joint_points.scad>
 
 module rotational_joint() {
     difference(){
@@ -202,7 +198,7 @@ module leg_5_joint_dep() {
 
 
 base();
-//translate([0,0,100])
+// translate([0,0,100])
 //color([0,1,1],0.3) // blue transparent
 translate([0,0,16])
 cover();
