@@ -1,5 +1,5 @@
 use <../modules/barrel_joint.scad>
-use <../non-printable-components/9g_servo.scad>
+use <../non-printable-components/servo.scad>
 
 $fs=0.5;
 

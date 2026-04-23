@@ -1,4 +1,4 @@
-use <../../non-printable-components/9g_servo.scad>
+use <../../non-printable-components/servo.scad>
 use <../../non-printable-components/circular-bearing.scad>
 use <components/in_eye_joint_inner.scad>
 use <components/in_eye_joint_outer.scad>

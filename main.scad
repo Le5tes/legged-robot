@@ -3,7 +3,7 @@ $fs=0.5;
 
 use <MCAD/regular_shapes.scad>
 use <MCAD/boxes.scad>
-use <non-printable-components/9g_servo.scad>
+use <non-printable-components/servo.scad>
 use <non-printable-components/circular-bearing.scad>
 use <modules/m2-bolt-hole.scad>
 use <modules/pi-mount.scad>
@@ -43,9 +43,9 @@ module rotational_joint() {
 
 module hip_attachment() {
     circular_bearing(19,10,5);
-    translate([-5.5,0,24])
+    translate([-7.6,0,23.75])
     rotate([180,0,0])
-    9g_motor();
+    24g_motor();
 
 }
 
@@ -203,7 +203,7 @@ base();
 //translate([0,0,100]) // to lift cover
 //color([0,1,1],0.3) // blue transparent
 //half_view()
-translate([0,0,16])
+translate([0,0,12])
 cover();
 
 translate(joint_point_LF)
@@ -220,5 +220,5 @@ translate(joint_point_RH)
 rotate([0,0,180])
 leg_2_joint();
 
-translate([60,0,90])
+translate([55,0,86])
 eye(yaw=0,pitch=0);

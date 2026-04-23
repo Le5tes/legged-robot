@@ -1,4 +1,4 @@
-use <../non-printable-components/9g_servo.scad>
+use <../non-printable-components/servo.scad>
 use <MCAD/regular_shapes.scad>
 use <MCAD/boxes.scad>
 $fs = 0.5;

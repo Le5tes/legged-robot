@@ -49,20 +49,20 @@ module base_2() {
         roundedBox( size=[140,140,3], radius=30, sidesonly=true);
         
         translate(joint_point_LF)
-        translate([-5.5,0,0])
-        cube([24,13,10],center=true);
+        translate([-7.6,0,0])
+        cube([31.5,16.6,10],center=true);
         
         translate(joint_point_RF)
-        translate([-5.5,0,0])
-        cube([24,13,10],center=true);
+        translate([-7.6,0,0])
+        cube([31.5,16.6,10],center=true);
         
         translate(joint_point_LH)
-        translate([5.5,0,0])
-        cube([24,13,10],center=true);
+        translate([7.6,0,0])
+        cube([31.5,16.6,10],center=true);
         
         translate(joint_point_RH)
-        translate([5.5,0,0])
-        cube([24,13,10],center=true);
+        translate([7.6,0,0])
+        cube([31.5,16.6,10],center=true);
         
         translate([50,50,-5])
         cylinder(r=5,h=10);

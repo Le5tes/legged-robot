@@ -38,8 +38,8 @@ module base_1(){
     }
     
     difference(){
-        translate([0,0,7.25])
-        roundedBox( size=[100,100,11.5], radius=20, sidesonly=true);
+        translate([0,0,5.25])
+        roundedBox( size=[100,100,7.5], radius=20, sidesonly=true);
         
         translate([50,50,-1])
         cylinder(h=20, d=80);
@@ -51,20 +51,20 @@ module base_1(){
         cylinder(h=20, d=80);
         
         translate(joint_point_LF)
-        translate([-5.5,0,17])
-        cube([24,13,10],center=true);
+        translate([-7.6,0,13])
+        cube([42,16.6,10],center=true);
         
         translate(joint_point_RF)
-        translate([-5.5,0,17])
-        cube([24,13,10],center=true);
+        translate([-7.6,0,13])
+        cube([42,16.6,10],center=true);
         
         translate(joint_point_LH)
-        translate([5.5,0,17])
-        cube([24,13,10],center=true);
+        translate([7.6,0,13])
+        cube([42,16.6,10],center=true);
         
         translate(joint_point_RH)
-        translate([5.5,0,17])
-        cube([24,13,10],center=true);
+        translate([7.6,0,13])
+        cube([42,16.6,10],center=true);
     }
 }
 
