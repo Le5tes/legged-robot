@@ -38,7 +38,7 @@ module battery_box() {
         rotate([0,0,-90])
         translate([-138,-135, 5]) // To put it at 0,0
         hull(){
-            import("../non-printable-components/XT60male.stl"); 
+            import("../../../non-printable-components/XT60male.stl"); 
         }
     }
 
