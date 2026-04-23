@@ -15,6 +15,8 @@ use <assemblies/cover/cover.scad>
 use <assemblies/eye/eye.scad>
 use <assemblies/base/base.scad>
 
+use <modules/half_view.scad>
+
 include <assemblies/base/joint_points.scad>
 
 module rotational_joint() {
@@ -200,6 +202,7 @@ module leg_5_joint_dep() {
 base();
 //translate([0,0,100]) // to lift cover
 //color([0,1,1],0.3) // blue transparent
+//half_view()
 translate([0,0,16])
 cover();
 
