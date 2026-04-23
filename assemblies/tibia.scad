@@ -20,11 +20,11 @@ module tib_1_main(length=150, inverse = false) {
     difference(){
         union() {
             rotate([90,0,-90])
-            barrel_joint_attachment(22);
+            barrel_joint_attachment(24,52);
             
             hull(){
-                translate([20,0,0])
-                cube([4,48,22],center=true);
+                translate([21,0,0])
+                cube([6,52,24],center=true);
                 
                 translate([length,0,-5])
                 sphere(6);

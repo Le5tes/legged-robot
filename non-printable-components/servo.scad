@@ -44,13 +44,13 @@ module 24g_motor(){
     
     translate([15.7,1.2,-5.2])
     rotate([0,90,0])
-    cylinder(r=0.6,h=5,$fn=20);
+    cylinder(r=0.6,h=3,$fn=20);
     color("red")
     translate([15.7,0,-5.2])
     rotate([0,90,0])
-    cylinder(r=0.6,h=5,$fn=20);
+    cylinder(r=0.6,h=3,$fn=20);
     color("#604030")
     translate([15.7,-1.2,-5.2])
     rotate([0,90,0])
-    cylinder(r=0.6,h=5,$fn=20);
+    cylinder(r=0.6,h=3,$fn=20);
 }

@@ -9,10 +9,10 @@ module fem_1_main(length=150) {
             translate([0,0,1.5])
             difference() {
                 hull() {
-                    translate([0,0,4.5])
+                    translate([0,0,5.5])
                     cylinder(r=10, h=3);
                     translate([30,0,3])
-                    cube([5,38,9], center=true);
+                    cube([5,42,11], center=true);
                 }
                 difference() {
                     hull(){
@@ -28,12 +28,12 @@ module fem_1_main(length=150) {
                 }
             }
 
-            translate([length,19,11])
+            translate([length,21,11])
             rotate([90,0,0])
-            barrel_joint_split(22,19);
+            barrel_joint_split_24g(24,19);
             difference() {
-                translate([(length-54)/2 + 30,0,11])
-                cube([length-50,38,22], center=true);
+                translate([(length-60)/2 + 30,0,11])
+                cube([length-60,42,24], center=true);
                 translate([55,0,11])
                 rotate([0,90,0])
                 cylinder(r=5,h=length-55);
@@ -44,7 +44,7 @@ module fem_1_main(length=150) {
             }
         }
         hull(){
-            translate([0,0,20.5])
+            translate([0,0,21.5])
             fem_1_attachment();
             translate([0,0,22])
             fem_1_attachment();
@@ -63,7 +63,7 @@ module fem_1_attachment() {
             translate([0,0,-1.5])
             cylinder(r=10, h=3);
             translate([30,0,0])
-            cube([5,38,3], center=true);
+            cube([5,42,3], center=true);
             translate([40,0,-1.5])
             cylinder(r=6, h=3);
         }
@@ -89,17 +89,17 @@ module fem_1_attachment() {
 }
 
 module fem_1(length=150) {
-    translate([length,19,11])
+    translate([length,21,11])
     rotate([90,0,0])
-    barrel_joint_split(22,19,true);
+    barrel_joint_split_24g(24,19,true);
     
     
-    translate([length - 5.5,2,11])
+    translate([length - 7.6,0,11])
     rotate([90,0,0])
-    9g_motor();
+    24g_motor();
     
     fem_1_main(length);
-    translate([0,0,20.5])
+    translate([0,0,21.5])
     fem_1_attachment();
 }
 
