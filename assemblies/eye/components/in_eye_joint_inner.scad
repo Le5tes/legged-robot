@@ -12,8 +12,7 @@ module in_eye_joint_inner() {
             roundedBox([30,29,11], radius=3, sidesonly=true);
             rotate([90,0,0])
             translate([0,0,12])
-            cylinder(r=11, h=6);
-            
+            cylinder(r=11, h=6);         
         }
         translate([-5.5,3,0])
         cube([23.4,22.4,12.5], center=true);
@@ -35,6 +34,12 @@ module in_eye_joint_inner() {
         rotate([-90,0,0])
         translate([0,0,15.8])
         cylinder(r=14, h=12);
+        
+        translate([-5,10.5,-11])
+        cube([20.4,1.4,4], center=true);
+        
+        translate([-5,-10.5,-11])
+        cube([20.4,1.4,4], center=true);
     }
     
     rotate([-90,0,0])
