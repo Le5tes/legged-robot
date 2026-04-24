@@ -6,13 +6,14 @@ $fs=0.5;
 module fem_1_main(length=150) {
     difference(){
         union() {
+            //lower attachment point
             translate([0,0,1.5])
             difference() {
                 hull() {
                     translate([0,0,5.5])
                     cylinder(r=10, h=3);
                     translate([30,0,3])
-                    cube([5,42,11], center=true);
+                    cube([5,40,11], center=true);
                 }
                 difference() {
                     hull(){
@@ -28,12 +29,12 @@ module fem_1_main(length=150) {
                 }
             }
 
-            translate([length,21,11])
+            translate([length,20,11])
             rotate([90,0,0])
             barrel_joint_split_24g(24,19);
             difference() {
                 translate([(length-60)/2 + 30,0,11])
-                cube([length-60,42,24], center=true);
+                cube([length-60,40,24], center=true);
                 translate([55,0,11])
                 rotate([0,90,0])
                 cylinder(r=5,h=length-55);
@@ -63,7 +64,7 @@ module fem_1_attachment() {
             translate([0,0,-1.5])
             cylinder(r=10, h=3);
             translate([30,0,0])
-            cube([5,42,3], center=true);
+            cube([5,40,3], center=true);
             translate([40,0,-1.5])
             cylinder(r=6, h=3);
         }
@@ -84,22 +85,32 @@ module fem_1_attachment() {
         cylinder(r=1.5,h=10);
         translate([35,-7,-5])
         cylinder(r=1.5,h=10);
+        
+        //servo horn
+        translate([0,0,-0.5])
+        hull(){
+            cylinder(h=2.1,d=8);
+            translate([17.1,0,0])
+            cylinder(h=2.1,d=5);
+        }
     }
     
 }
 
 module fem_1(length=150) {
-    translate([length,21,11])
+    translate([length,20,11])
     rotate([90,0,0])
     barrel_joint_split_24g(24,19,true);
     
     
-    translate([length - 7.6,0,11])
+    translate([length - 7.6,-0.6,11])
     rotate([90,0,0])
-    24g_motor();
+    24g_motor_with_horn(-45);
     
     fem_1_main(length);
+    
     translate([0,0,21.5])
+    rotate([180,0,0])
     fem_1_attachment();
 }
 

@@ -1,4 +1,4 @@
-24g_motor();
+24g_motor_with_horn();
 
 module 9g_motor(){
 	difference(){			
@@ -15,6 +15,25 @@ module 9g_motor(){
 			translate([hole,0,5]) cylinder(r=2.2, h=4, $fn=20, center=true);
 		}	
 	}
+}
+
+module 24g_motor_horn() {
+	color("white"){
+        hull(){
+            cylinder(h=2, d=8, $fn=20);
+            translate([17.1,0,0])
+            cylinder(h=2,d=5, $fn=20);
+        }
+        translate([0,0,-3])
+        cylinder(h=5, d=7, $fn=20);
+    }
+}
+
+module 24g_motor_with_horn(angle){
+    24g_motor();
+    translate([7.6,0,19.8])
+	rotate(angle)
+    24g_motor_horn();
 }
 
 module 24g_motor(){
