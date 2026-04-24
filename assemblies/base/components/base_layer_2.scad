@@ -46,24 +46,34 @@ module battery_box() {
 
 module base_2() {
     difference(){
-        roundedBox( size=[140,140,3], radius=30, sidesonly=true);
+        union() {
+            roundedBox( size=[140,140,3], radius=30, sidesonly=true);
+
+            //raised mounts for servos
+            translate([0,30,3.5])
+            cube([90,20,4], center=true);
+            translate([0,-30,3.5])
+            cube([90,20,4], center=true);
+        }
         
+        //holes for servos
         translate(joint_point_LF)
         translate([-7.6,0,0])
-        cube([31.5,16.6,10],center=true);
+        cube([31.5,16.6,20],center=true);
         
         translate(joint_point_RF)
         translate([-7.6,0,0])
-        cube([31.5,16.6,10],center=true);
+        cube([31.5,16.6,20],center=true);
         
         translate(joint_point_LH)
         translate([7.6,0,0])
-        cube([31.5,16.6,10],center=true);
+        cube([31.5,16.6,20],center=true);
         
         translate(joint_point_RH)
         translate([7.6,0,0])
-        cube([31.5,16.6,10],center=true);
+        cube([31.5,16.6,20],center=true);
         
+        //holes for wires
         translate([50,50,-5])
         cylinder(r=5,h=10);
         translate([50,-50,-5])

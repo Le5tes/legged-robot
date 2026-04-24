@@ -41,18 +41,18 @@ module rotational_joint() {
 }
 
 
-module hip_attachment() {
+module hip_attachment(inversion) {
     circular_bearing(19,10,5);
-    translate([-7.6,0,23.75])
+    translate([-7.6,0,27.75])
     rotate([180,0,0])
-    24g_motor();
+    24g_motor_with_horn(-45 * inversion);
 
 }
 
 
 module leg_2_joint(inverse = false) {
     inversion = inverse ? -1 : 1;
-    hip_attachment();
+    hip_attachment(inversion);
     
     rotate([0,0,45 * inversion]){
         servo_connection_rod();

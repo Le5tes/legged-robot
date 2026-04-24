@@ -11,15 +11,16 @@ module fem_1_main(length=150) {
             difference() {
                 hull() {
                     translate([0,0,5.5])
-                    cylinder(r=10, h=3);
+                    cylinder(r=12, h=3);
                     translate([30,0,3])
                     cube([5,40,11], center=true);
                 }
+
                 difference() {
                     hull(){
-                        cube([5.2,10.2,16],center=true);
+                        cube([10,5,18],center=true);
                         translate([0,0,-8])
-                        cylinder(r=3.6, h=16);
+                        cylinder(r=3.6, h=18);
                     }
                     translate([0,0,-10])
                     difference() {
@@ -62,24 +63,17 @@ module fem_1_attachment() {
     difference() {
         hull() {
             translate([0,0,-1.5])
-            cylinder(r=10, h=3);
+            cylinder(r=12, h=3);
             translate([30,0,0])
             cube([5,40,3], center=true);
             translate([40,0,-1.5])
             cylinder(r=6, h=3);
         }
-       difference() {
-            hull(){
-                cube([5.2,10.2,16],center=true);
-                translate([0,0,-8])
-                cylinder(r=3.6, h=16);
-            }
-            translate([0,0,-10])
-            difference() {
-                cylinder(r=10, h=20);
-                cylinder(r=5.2, h=20);
-            }
-        }
+        hull(){
+            cube([5,15,16],center=true);
+            translate([0,0,-8])
+            cylinder(r=5, h=16);
+        }      
         
         translate([35,7,-5])
         cylinder(r=1.5,h=10);
